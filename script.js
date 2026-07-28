@@ -8,7 +8,7 @@
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/BAxvmt4tZrTDgmEOeU57EP?s=cl&p=i&ilr=2";
 
 // Cole aqui o ID do seu Meta Pixel (deixe vazio para não ativar o rastreamento)
-const META_PIXEL_ID = "";
+const META_PIXEL_ID = "1716643986293351";
 
 // Porcentagem exibida na barra de crescimento do grupo (0 a 100)
 const GROUP_PERCENTAGE = 85;
