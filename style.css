@@ -1,0 +1,473 @@
+/* ==========================================
+   RAVENA HOME — VARIÁVEIS DE DESIGN
+========================================== */
+:root {
+  --bg: #F7F3EE;
+  --white: #FFFFFF;
+  --terracota: #A96250;
+  --terracota-escuro: #8E4F40;
+  --bege: #D8C1AF;
+  --texto-principal: #403732;
+  --texto-secundario: #77706B;
+  --faixa-bg: #3F3732;
+
+  --radius-card: 28px;
+  --radius-btn: 16px;
+  --shadow-card: 0 20px 50px -20px rgba(64, 55, 50, 0.18);
+  --shadow-btn: 0 10px 24px -8px rgba(169, 98, 80, 0.45);
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Manrope', sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(169, 98, 80, 0.05), transparent 40%),
+    radial-gradient(circle at 88% 92%, rgba(216, 193, 175, 0.18), transparent 45%);
+  color: var(--texto-principal);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   FAIXA SUPERIOR
+========================================== */
+.top-bar {
+  background-color: var(--faixa-bg);
+  padding: 10px 16px;
+  text-align: center;
+}
+
+.top-bar__text {
+  color: #F2EAE1;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   LAYOUT GERAL
+========================================== */
+.page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 16px 40px;
+}
+
+/* ==========================================
+   CARD PRINCIPAL
+========================================== */
+.card {
+  width: 100%;
+  max-width: 440px;
+  background: var(--white);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: 36px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: card-in 0.7s ease-out both;
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   AVATAR
+========================================== */
+.avatar-wrap {
+  margin-bottom: 22px;
+  animation: avatar-in 0.8s ease-out 0.15s both;
+}
+
+@keyframes avatar-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.avatar-ring {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--terracota), var(--bege));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--white);
+  background: var(--white);
+}
+
+/* ==========================================
+   HEADLINE
+========================================== */
+.headline {
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1.25;
+  color: var(--texto-principal);
+  margin-bottom: 14px;
+  animation: text-in 0.7s ease-out 0.25s both;
+}
+
+.headline__italic {
+  display: block;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 32px;
+  color: var(--terracota-escuro);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.headline__accent {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 26px;
+  margin-top: 4px;
+}
+
+@keyframes text-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   SUBHEADLINE
+========================================== */
+.subheadline {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--texto-secundario);
+  max-width: 360px;
+  margin-bottom: 26px;
+  animation: text-in 0.7s ease-out 0.32s both;
+}
+
+.subheadline strong {
+  color: var(--texto-principal);
+  font-weight: 700;
+}
+
+/* ==========================================
+   BOTÃO PRINCIPAL
+========================================== */
+.cta-button {
+  width: 100%;
+  background: var(--terracota);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  border-radius: var(--radius-btn);
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: var(--shadow-btn);
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  animation: text-in 0.7s ease-out 0.4s both;
+  min-height: 56px;
+}
+
+.cta-button:hover {
+  background: var(--terracota-escuro);
+  transform: translateY(-1px);
+}
+
+.cta-button:active {
+  transform: scale(0.97);
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid var(--terracota-escuro);
+  outline-offset: 3px;
+}
+
+.cta-button__icon {
+  flex-shrink: 0;
+}
+
+.cta-button--secondary {
+  margin-top: 28px;
+  background: var(--white);
+  color: var(--terracota-escuro);
+  border: 1.5px solid var(--bege);
+  box-shadow: none;
+  font-size: 14px;
+  padding: 14px 20px;
+  min-height: 48px;
+}
+
+.cta-button--secondary:hover {
+  background: var(--bg);
+  border-color: var(--terracota);
+}
+
+/* ==========================================
+   MICROCOPY
+========================================== */
+.microcopy {
+  font-size: 12.5px;
+  color: var(--texto-secundario);
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* ==========================================
+   INDICADOR DE GRUPO
+========================================== */
+.group-indicator {
+  width: 100%;
+  background: var(--bg);
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin-top: 22px;
+  text-align: left;
+}
+
+.group-indicator__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.group-indicator__label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--texto-principal);
+}
+
+.group-indicator__percentage {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--terracota-escuro);
+}
+
+.group-indicator__track {
+  width: 100%;
+  height: 8px;
+  background: var(--bege);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.group-indicator__fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--terracota), var(--terracota-escuro));
+  border-radius: 999px;
+  transition: width 1.1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group-indicator__message {
+  font-size: 12px;
+  color: var(--texto-secundario);
+  margin-top: 8px;
+}
+
+/* ==========================================
+   BENEFÍCIOS
+========================================== */
+.benefits {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  text-align: left;
+  padding: 14px 0;
+}
+
+.benefit__icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--terracota-escuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit__title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--texto-principal);
+  margin-bottom: 4px;
+}
+
+.benefit__desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--texto-secundario);
+}
+
+.benefit-divider {
+  height: 1px;
+  background: var(--bg);
+  width: 100%;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+.footer {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.footer p {
+  font-size: 11.5px;
+  color: var(--texto-secundario);
+  opacity: 0.85;
+}
+
+/* ==========================================
+   NOTIFICAÇÃO SOCIAL
+========================================== */
+.social-proof {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, 20px);
+  background: var(--white);
+  color: var(--texto-principal);
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 12px 30px -10px rgba(64, 55, 50, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: calc(100% - 32px);
+  z-index: 50;
+}
+
+.social-proof.is-visible {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.social-proof__check {
+  color: var(--terracota);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ==========================================
+   RESPONSIVIDADE — TABLET / DESKTOP
+========================================== */
+@media (min-width: 640px) {
+  .page {
+    padding: 48px 16px 56px;
+  }
+
+  .card {
+    max-width: 460px;
+    padding: 44px 40px 36px;
+  }
+
+  .headline {
+    font-size: 28px;
+  }
+
+  .headline__italic {
+    font-size: 36px;
+  }
+
+  .headline__accent {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .top-bar__text {
+    font-size: 12px;
+  }
+
+  .card {
+    max-width: 480px;
+  }
+}
+
+/* Telas muito estreitas (320px) */
+@media (max-width: 340px) {
+  .card {
+    padding: 30px 18px 26px;
+  }
+
+  .headline {
+    font-size: 23px;
+  }
+
+  .headline__italic {
+    font-size: 28px;
+  }
+
+  .headline__accent {
+    font-size: 23px;
+  }
+}

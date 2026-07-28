@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ravena Home | Curadoria de Ofertas para sua Casa</title>
+  <meta name="description" content="Descubra ofertas, achados e produtos selecionados para casa e decoração. Entre gratuitamente no grupo VIP da Ravena Home.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ravena Home | Curadoria de Ofertas para sua Casa">
+  <meta property="og:description" content="Descubra ofertas, achados e produtos selecionados para casa e decoração. Entre gratuitamente no grupo VIP da Ravena Home.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/avatar.jpg">
+
+  <!-- Favicon (substitua por seu favicon real quando tiver um) -->
+  <link rel="icon" type="image/jpeg" href="assets/avatar.jpg">
+
+  <!-- Preconnect para carregamento rápido de fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- FAIXA SUPERIOR -->
+  <div class="top-bar">
+    <span class="top-bar__text">🔑 CURADORIA DE OFERTAS &amp; DECORAÇÃO 🔑</span>
+  </div>
+
+  <main class="page">
+    <!-- CARD PRINCIPAL -->
+    <section class="card" aria-label="Ravena Home - Grupo VIP">
+
+      <!-- AVATAR -->
+      <div class="avatar-wrap">
+        <div class="avatar-ring">
+          <img
+            class="avatar-img"
+            src="assets/avatar.jpg"
+            alt="Ravena Home - curadoria de ofertas e decoração"
+            width="112"
+            height="112"
+            loading="eager"
+          >
+        </div>
+      </div>
+
+      <!-- HEADLINE -->
+      <h1 class="headline">
+        As melhores descobertas
+        <span class="headline__italic">para sua casa</span>
+        <span class="headline__accent">sem pagar caro.</span>
+      </h1>
+
+      <!-- SUBHEADLINE -->
+      <p class="subheadline">
+        Entre no <strong>grupo VIP</strong> e receba <strong>ofertas</strong>, achados e
+        <strong>descontos selecionados</strong> para deixar sua casa ainda mais bonita — sem pagar caro.
+      </p>
+
+      <!-- BOTÃO PRINCIPAL -->
+      <a
+        href="#"
+        id="cta-whatsapp"
+        class="cta-button"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Entrar no grupo VIP da Ravena Home pelo WhatsApp"
+      >
+        <svg class="cta-button__icon" viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+          <path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12.02 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18.13c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.06.8.82-2.98-.21-.31A8.11 8.11 0 0 1 3.9 12c0-4.48 3.64-8.13 8.12-8.13s8.12 3.65 8.12 8.13-3.64 8.13-8.12 8.13zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+        </svg>
+        <span>ENTRAR NO GRUPO VIP</span>
+      </a>
+
+      <!-- MICROCOPY DE SEGURANÇA -->
+      <p class="microcopy">🔒 Gratuito • Sem spam • Ofertas selecionadas</p>
+
+      <!-- INDICADOR DE GRUPO -->
+      <div class="group-indicator">
+        <div class="group-indicator__row">
+          <span class="group-indicator__label">Grupo VIP em crescimento</span>
+          <span class="group-indicator__percentage" id="group-percentage-label">85%</span>
+        </div>
+        <div class="group-indicator__track" role="progressbar" aria-label="Crescimento do grupo VIP" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+          <div class="group-indicator__fill" id="group-fill"></div>
+        </div>
+        <p class="group-indicator__message" id="group-message">Novos membros entrando todos os dias</p>
+      </div>
+
+      <!-- BENEFÍCIOS -->
+      <div class="benefits">
+        <div class="benefit">
+          <div class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2 L19 9 L12 22 L5 9 Z" stroke-linejoin="round"/>
+              <path d="M5 9 H19 M12 2 L9 9 M12 2 L15 9 M9 9 L12 22 M15 9 L12 22" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="benefit__text">
+            <h3 class="benefit__title">Achados que valem a pena</h3>
+            <p class="benefit__desc">Produtos bonitos e funcionais para casa, encontrados em ofertas que realmente chamam atenção.</p>
+          </div>
+        </div>
+
+        <div class="benefit-divider"></div>
+
+        <div class="benefit">
+          <div class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.5 12.5 L12.5 20.5 C12.1 20.9 11.4 20.9 11 20.5 L3.5 13 C3.2 12.7 3 12.3 3 11.9 V5.5 C3 4.7 3.7 4 4.5 4 H10.9 C11.3 4 11.7 4.2 12 4.5 L20.5 13 C20.9 13.4 20.9 14 20.5 14.4" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="7.5" cy="8.5" r="1.25"/>
+            </svg>
+          </div>
+          <div class="benefit__text">
+            <h3 class="benefit__title">Ofertas selecionadas</h3>
+            <p class="benefit__desc">Promoções e oportunidades escolhidas pensando em preço, utilidade e qualidade.</p>
+          </div>
+        </div>
+
+        <div class="benefit-divider"></div>
+
+        <div class="benefit">
+          <div class="benefit__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 20 H20 M6 20 V10 L12 5 L18 10 V20 M9.5 20 V14.5 H14.5 V20" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="benefit__text">
+            <h3 class="benefit__title">Casa bonita sem gastar uma fortuna</h3>
+            <p class="benefit__desc">Ideias e produtos para transformar ambientes, organizar a casa e encontrar peças que fazem diferença.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEGUNDO CTA (discreto, ao final) -->
+      <a
+        href="#"
+        id="cta-whatsapp-secondary"
+        class="cta-button cta-button--secondary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Entrar no grupo VIP da Ravena Home pelo WhatsApp"
+      >
+        <svg class="cta-button__icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+          <path d="M12.02 2C6.5 2 2.02 6.48 2.02 12c0 1.85.5 3.58 1.38 5.07L2 22l5.07-1.33A9.94 9.94 0 0 0 12.02 22c5.52 0 10-4.48 10-10s-4.48-10-10-10zm0 18.13c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.06.8.82-2.98-.21-.31A8.11 8.11 0 0 1 3.9 12c0-4.48 3.64-8.13 8.12-8.13s8.12 3.65 8.12 8.13-3.64 8.13-8.12 8.13zm4.46-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.12-.16.24-.63.79-.78.95-.14.16-.29.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.24-.4.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42-.14-.01-.31-.01-.47-.01-.16 0-.43.06-.65.31-.22.24-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.16 1.73 2.64 4.19 3.7.59.25 1.04.4 1.4.51.59.19 1.12.16 1.54.1.47-.07 1.44-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z"/>
+        </svg>
+        <span>QUERO ENTRAR AGORA</span>
+      </a>
+
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Ravena Home — Curadoria de Ofertas &amp; Decoração</p>
+    </footer>
+  </main>
+
+  <!-- NOTIFICAÇÃO SOCIAL DISCRETA -->
+  <div class="social-proof" id="social-proof" role="status" aria-live="polite">
+    <span class="social-proof__check">✓</span>
+    <span id="social-proof-text"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
