@@ -5,7 +5,7 @@
 
 // Cole aqui o link do seu grupo VIP do WhatsApp
 // Exemplo: "https://chat.whatsapp.com/XXXXXXXXXXXXXXXXXXXXXX"
-const WHATSAPP_GROUP_URL = "COLE_SEU_LINK_AQUI";
+const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/BAxvmt4tZrTDgmEOeU57EP?s=cl&p=i&ilr=2";
 
 // Cole aqui o ID do seu Meta Pixel (deixe vazio para não ativar o rastreamento)
 const META_PIXEL_ID = "";
