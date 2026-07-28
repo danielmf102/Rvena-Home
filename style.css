@@ -144,15 +144,7 @@ a {
   background: var(--white);
 }
 
-.brand-name {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 600;
-  font-size: 15px;
-  letter-spacing: 0.03em;
-  color: var(--terracota-escuro);
-  margin-bottom: 8px;
-}/* ==========================================
+/* ==========================================
    HEADLINE
 ========================================== */
 .headline {
